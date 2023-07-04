@@ -23,7 +23,7 @@
 export default {
   methods: {
     openURL() {
-      const url = this.getLink; // Replace with your desired URL
+      const url = this.getLink;
       window.open(url, "_blank");
     },
   },
