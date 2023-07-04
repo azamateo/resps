@@ -11,13 +11,19 @@
         <nav>
           <ul>
             <li>
-              <a @click="scrollToComponent('about')">Какие плюсы?</a>
+              <a @click="scrollToComponent('about'), toggleNavbar()"
+                >Какие плюсы?</a
+              >
             </li>
             <li>
-              <a @click="scrollToComponent('howto')">Что потребуется от тебя</a>
+              <a @click="scrollToComponent('howto'), toggleNavbar()"
+                >Что потребуется от тебя</a
+              >
             </li>
             <li>
-              <a @click="scrollToComponent('mission')">Наша миссия</a>
+              <a @click="scrollToComponent('mission'), toggleNavbar()"
+                >Наша миссия</a
+              >
             </li>
             <li><a @click="openURL">Присоединиться</a></li>
           </ul>
@@ -40,14 +46,6 @@ export default {
   methods: {
     toggleNavbar() {
       this.isNavbarVisible = !this.isNavbarVisible;
-      this.bodyScroll();
-    },
-    bodyScroll() {
-      if (this.isNavbarVisible) {
-        document.documentElement.classList.add("hide-scroll");
-      } else {
-        document.documentElement.classList.remove("hide-scroll");
-      }
     },
     scrollToComponent(id) {
       this.$emit("scrollTo", id);

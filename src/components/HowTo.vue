@@ -6,7 +6,7 @@
         <div class="howto__number firstnum">
           <h1>1</h1>
         </div>
-        <h3>{{ howtoFirstName }}</h3>
+        <h3 v-html="howtoFirstName"></h3>
         <p>{{ howtoFirstDesc }}</p>
       </div>
       <div class="howto__block">
@@ -35,6 +35,7 @@
     </div>
   </div>
 </template>
+
 <style>
 .firstnum {
   background: #eaf4ff;
